@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX_NOMBRE 50
+
+
+struct Producto {
+	char nombre[MAX_NOMBRE];
+	float precio;
+	int stock;
+};
+
+int main() {
+	struct Producto prod1 = {"Producto1", 1000, 10};
+	struct Producto prod2 = {"Producto2", 2000, 20};
+	
+	
+	printf("Producto con mayor stock:\n");
+	if (prod1.stock > prod2.stock) {
+		printf("Nombre: %s\nPrecio: %.2f\nStock: %d\n", prod1.nombre, prod1.precio, prod1.stock);
+	} else (prod2.stock > prod1.stock); {
+		printf("Nombre: %s\nPrecio: %.2f\nStock: %d\n", prod2.nombre, prod2.precio, prod2.stock);
+	}
+	
+	return 0;
+}
