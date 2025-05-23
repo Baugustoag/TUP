@@ -2,18 +2,20 @@
 #include <string.h>
 #define MAX_NOMBRE 50
 
-
+// Se define la estructura
 struct Producto {
 	char nombre[MAX_NOMBRE];
 	float precio;
 	int stock;
 };
+// Se cargan los datos 
 
 int main() {
 	struct Producto prod1 = {"Producto1", 1000, 10};
 	struct Producto prod2 = {"Producto2", 2000, 20};
 	
-	
+// Se comparan para mostrar el de mayor stock	
+
 	printf("Producto con mayor stock:\n");
 	if (prod1.stock > prod2.stock) {
 		printf("Nombre: %s\nPrecio: %.2f\nStock: %d\n", prod1.nombre, prod1.precio, prod1.stock);
